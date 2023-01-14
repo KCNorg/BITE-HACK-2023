@@ -1,11 +1,15 @@
 import './App.css';
-import LoginForm from './components/login-form/LoginForm';
+import "bootstrap/dist/css/bootstrap.min.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Auth from "./components/LoginForm/Auth"
 
 function App() {
   return (
-    <div className="app">
-      <LoginForm/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Auth />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
