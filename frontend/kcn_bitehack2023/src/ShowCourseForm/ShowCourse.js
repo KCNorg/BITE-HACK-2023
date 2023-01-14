@@ -54,55 +54,25 @@ function ShowCourse() {
   return (
     <div className="show-course-form">
       <div className="activity-title-container">
-        <p>
+        <p className="activity-title">
           {currActivity.title}
         </p>
       </div>
       <div className="course-progress-container">
         <p>
-          {currActivity.content}
+          PROGRESS
         </p>
       </div>
-      {/* <Box
-        className="activity-content-container"
-        component="form"
-        sx={{
-          '& .MuiTextField-root': { m: 1, width: '100ch', margin: '17px' },
-        }}
-        noValidate
-        autoComplete="off"
-      > */}
       <div className="activity-content-container">
-        {/* <TextField className="activity-content" defaultValue={currActivity.content} 
-            disabled multiline rows={15} sx={{ defaultValue: { color: 'black' } }}>
-          </TextField> */}
         <p className="activity-content">
           {currActivity.content}
         </p>
       </div>
-      {/* </Box> */}
-      {/* <Box
-        className="activity-comments-container"
-        component="form"
-        sx={{
-          '& .MuiTextField-root': { m: 1, width: '55ch', margin: '6px' },
-        }}
-        noValidate
-        autoComplete="off"
-      > */}
       <div className="activity-comments-container">
-        {/* <Box className="activity-comments" component="div" sx={{ visibility: 'visible', whiteSpace: 'normal' }}>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-          </Box> */}
-        {/* <TextField className="activity-comments" defaultValue={currActivity.comments} 
-            disabled multiline rows={15} sx={{ input: { color: 'black' } }}>
-            {currActivity.comments}
-          </TextField> */}
         <p className="activity-comments-content">
           {currActivity.comments}
         </p>
       </div>
-      {/* </Box> */}
       <div className="buttons-panel">
         <Button className="next-button" variant="primary" onClick={handleNext}>
           Next
