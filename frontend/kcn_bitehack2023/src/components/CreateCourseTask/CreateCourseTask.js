@@ -20,35 +20,29 @@ export default function CreateCourseTask() {
                 <div className="Task-form-title">
                     {displayCourseName(title)}
                 </div>
-                <div className="Task-form-content">
-                    <Box
-                        component="form"
-                        sx={{
-                            '& .MuiTextField-root': { m: 1, width: '50ch', margin: '17px' },
-                        }}
-                        noValidate
-                        autoComplete="off"
-                    >
-                        <TextField
-                            id="task-name"
-                            label="Name"
-                            variant="outlined"
-                            />
-                    </Box>
+                <div className="Task-form-name-field">
+                    <TextField
+                        sx={{ m: 1, width: '60ch', margin: '17px' }}
+                        id="task-name"
+                        label="Name"
+                        variant="filled"
+                        />
                 </div>
-                <div className="Task-form-content">
-                    <div id="Text-Fields" className="Task-form-content">
+                <div id="grid-parent" className="Task-form-content-grid">
+                    <div id="Text-Fields" className="Task-grid-theory">
                         <Box
-                            component="form"
-                            sx={{
-                                '& .MuiTextField-root': { m: 1, width: '50ch', margin: '17px' },
-                            }}
-                            noValidate
-                            autoComplete="off"
+                            sx={{ display: 'flex', flexWrap: 'wrap' }}
+                            // component="form"
+                            // sx={{
+                            //     '& .MuiTextField-root': { m: 1, width: '60ch', margin: '17px' },
+                            // }}
+                            // noValidate
+                            // autoComplete="off"
                         >
                         <TextField
+                            sx={{ m: 1, width: '60ch', margin: '17px' }}
                             id="outlined-multiline-flexible"
-                            label="Multiline"
+                            label="Theory note"
                             multiline
                             rows={15}
                             placeholder="Placeholder"
@@ -56,19 +50,31 @@ export default function CreateCourseTask() {
                             size="Normal"
 
                         />
-                        <TextField
-                            id="outlined-multiline-flexibles"
-                            label="Multiline"
-                            multiline
-                            rows={15}
-                            placeholder="Placeholder"
-                            variant="filled"
-                        />
+                        </Box>
+
+                    </div>
+                    <div className="Task-grid-quiz">
+                        <Box
+                            sx={{ display: 'flex', flexWrap: 'wrap' }}
+                        noValidate
+                        aria-autocomplete="off">
+                        <div>
+                            <TextField
+                                id="outlined-flexible"
+                                sx={{ m: 1, width: '45ch', margin: '17px' }}
+                                label="question"
+                                placeholder="Question placeholder"
+                                variant="filled"
+                                size="Normal"
+                                fullWidth
+                            />
+                        </div>
+
                         </Box>
                     </div>
-                    <div className="Task-form-content">
-                        <Button variant="contained">Submit</Button>
-                    </div>
+                </div>
+                <div className="Task-form-content">
+                    <Button variant="contained">Submit</Button>
                 </div>
             </div>
         </div>
