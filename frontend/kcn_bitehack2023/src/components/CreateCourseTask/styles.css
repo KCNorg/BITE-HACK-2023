@@ -22,13 +22,17 @@
     align-items: center;
 }
 
+.Task-form-content-item {
+    margin: 17px;
+}
+
+
+
 .Task-form-content-grid {
     display: grid;
     padding-left: 2%;
     padding-right: 2%;
     align-content: start;
-    /*justify-content: start;*/
-    /*align-items: center;*/
 }
 
 

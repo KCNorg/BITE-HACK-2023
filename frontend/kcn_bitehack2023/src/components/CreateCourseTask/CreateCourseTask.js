@@ -2,14 +2,19 @@ import * as React from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import {Button} from "@mui/material";
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import "./styles.css"
 
 export default function CreateCourseTask() {
 
-    let title = "Hello";
+
+    //TODO title should be given from createCoursePage where it is seted
+    let title = "Fishing: the basics";
+
     const displayCourseName = () => {
         return (
-            <h1 className="Task-form-sub-title">{title}</h1>
+            <h4 className="Task-form-sub-title">{title}</h4>
         )
     }
 
@@ -30,15 +35,7 @@ export default function CreateCourseTask() {
                 </div>
                 <div id="grid-parent" className="Task-form-content-grid">
                     <div id="Text-Fields" className="Task-grid-theory">
-                        <Box
-                            sx={{ display: 'flex', flexWrap: 'wrap' }}
-                            // component="form"
-                            // sx={{
-                            //     '& .MuiTextField-root': { m: 1, width: '60ch', margin: '17px' },
-                            // }}
-                            // noValidate
-                            // autoComplete="off"
-                        >
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
                         <TextField
                             sx={{ m: 1, width: '60ch', margin: '17px' }}
                             id="outlined-multiline-flexible"
@@ -56,17 +53,72 @@ export default function CreateCourseTask() {
                     <div className="Task-grid-quiz">
                         <Box
                             sx={{ display: 'flex', flexWrap: 'wrap' }}
-                        noValidate
-                        aria-autocomplete="off">
+                            noValidate
+                            aria-autocomplete="off"
+                        >
                         <div>
                             <TextField
                                 id="outlined-flexible"
                                 sx={{ m: 1, width: '45ch', margin: '17px' }}
-                                label="question"
+                                label="question..."
                                 placeholder="Question placeholder"
                                 variant="filled"
                                 size="Normal"
                                 fullWidth
+                            />
+                            <TextField
+                                id="outlined-flexible"
+                                sx={{ m: 1, width: '39ch', margin: '17px' }}
+                                label="answer 1.."
+                                placeholder="Question placeholder"
+                                variant="filled"
+                                size="Normal"
+                                fullWidth
+                            />
+                            <Checkbox
+                                defaultChecked
+                                color="success"
+                                sx={{ '& .MuiSvgIcon-root': {
+                                        fontSize: 28,
+                                        marginTop: '20px'
+                                    }
+                                }}
+                            />
+                            <TextField
+                                id="outlined-flexible"
+                                sx={{ m: 1, width: '39ch', margin: '17px' }}
+                                label="answer 2.."
+                                placeholder="Question placeholder"
+                                variant="filled"
+                                size="Normal"
+                                fullWidth
+                            />
+                            <Checkbox
+                                defaultChecked
+                                color="success"
+                                sx={{ '& .MuiSvgIcon-root': {
+                                        fontSize: 28,
+                                        marginTop: '20px'
+                                    }
+                                }}
+                            />
+                            <TextField
+                                id="outlined-flexible"
+                                sx={{ m: 1, width: '39ch', margin: '17px' }}
+                                label="answer 3.."
+                                placeholder="Question placeholder"
+                                variant="filled"
+                                size="Normal"
+                                fullWidth
+                            />
+                            <Checkbox
+                                defaultChecked
+                                color="success"
+                                sx={{ '& .MuiSvgIcon-root': {
+                                        fontSize: 28,
+                                        marginTop: '20px'
+                                    }
+                                }}
                             />
                         </div>
 
@@ -74,7 +126,21 @@ export default function CreateCourseTask() {
                     </div>
                 </div>
                 <div className="Task-form-content">
-                    <Button variant="contained">Submit</Button>
+                    <div className="Task-form-content-item">
+                        <Button
+                            variant="contained"
+                            fullWidth='on'
+                            sx={{ marginTop: '17px' }}>
+                            Submit Task
+                        </Button>
+                        <Button
+                            variant="contained"
+                            fullWidth='in'
+                            sx={{ marginTop: '17px' }}
+                            color="success">
+                            Finish Course
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>
