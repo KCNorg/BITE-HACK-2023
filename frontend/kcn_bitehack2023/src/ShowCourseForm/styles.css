@@ -8,6 +8,7 @@
   padding: 10px;
   padding-top: 100px;
   align-items: center;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
 }
 
 .activity-title-container {
@@ -35,6 +36,7 @@
   /* background-color: rgb(209, 231, 14); */
   border: solid;
   border-radius: 10px;
+  background-color: antiquewhite;
 }
 
 .activity-content {
@@ -47,14 +49,27 @@
   grid-column: 3;
   grid-row: 2;
   /* background-color: rgb(255, 0, 123); */
-  border: solid;
-  border-radius: 10px;
+  /* border: solid; */
+  /* border-radius: 10px; */
+  margin: 7px;
+  height: 420px;
 }
 
 .activity-comments-content {
   color: black;
-  margin: 7px;
-  height: 400px;
+  border: solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.activity-comment-container {
+  color: black;
+  border: solid;
+  border-radius: 10px;
+}
+
+.activity-comment-content {
+  text-align: center;
 }
 
 .buttons-panel {
