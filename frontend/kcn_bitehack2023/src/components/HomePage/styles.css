@@ -22,3 +22,12 @@
     transform: translate(-50%, -50%);
     box-shadow: rgb(0 0 0 / 16%) 1px 3px 10px;
 }
+
+.Friends-list{
+    position: absolute;
+    width: 220px;
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgb(0 0 0 / 16%) 1px 3px 10px;
+}

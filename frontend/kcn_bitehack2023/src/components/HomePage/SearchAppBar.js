@@ -20,6 +20,7 @@ import { useState } from "react";
 import "./styles.css"
 import RecommendedCourses from './RecommendedCourses';
 import SavedCourses from './SavedCourses';
+import FriendsList from './FriendsList';
 
 
 var data = require("./MOCK_DATA.json");
@@ -265,6 +266,9 @@ export default function SearchAppBar() {
       </div>
       <div>
         <SavedCourses/>
+      </div>
+      <div>
+        <FriendsList/>
       </div>
     </Box>
   );
