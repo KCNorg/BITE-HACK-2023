@@ -1,51 +1,65 @@
 .show-course-form {
-  height: 900px;
+  padding-top: 100px;
+  height: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
+  column-gap: 5px;
+  row-gap: 5px;
   align-items: center;
-}
-
-.top-bar-container {
-  grid-column: 1;
-  grid-row: 1;
-  column-span: 2;
-  column-gap: 50px;
-  display: flex;
 }
 
 .activity-title-container {
   grid-column: 1;
   grid-row: 1;
-  background-color: blue;
+  /* background-color: blue; */
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
 }
 
 .course-progress-container {
   grid-column: 2;
   grid-row: 1;
-  background-color: blueviolet;
-
+  /* background-color: blueviolet; */
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
 }
 
 .activity-content-container {
   grid-column: 1;
   grid-row: 2;
-  background-color: rgb(209, 231, 14);
+  /* background-color: rgb(209, 231, 14); */
+  border: solid;
+}
 
+.activity-content {
+  color: black;
+  margin: 7px;
+  height: 400px;
 }
 
 .activity-comments-container {
   grid-column: 2;
   grid-row: 2;
-  background-color: rgb(255, 0, 123);
+  /* background-color: rgb(255, 0, 123); */
+  border: solid;
+}
 
+.activity-comments-content {
+  color: black;
+  margin: 7px;
+  height: 400px;
 }
 
 .buttons-panel {
   grid-column: 2;
   grid-row: 3;
-  background-color: rgb(18, 212, 131);
-
+  /* background-color: rgb(18, 212, 131); */
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
 }
 
 label {

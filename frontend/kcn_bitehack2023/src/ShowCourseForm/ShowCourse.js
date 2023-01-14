@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 
 import "./styles.css";
 
@@ -40,6 +41,11 @@ function ShowCourse() {
       ;
   };
 
+  const handleShowComments = (event) => {
+    event.preventDefault();
+
+  };
+
   const handleStop = (event) => {
     event.preventDefault();
 
@@ -47,31 +53,62 @@ function ShowCourse() {
 
   return (
     <div className="show-course-form">
-      <div className="top-bar-container">
-        <div className="activity-title-container">
-          <p>
-            {currActivity.title}
-          </p>
-        </div>
-        <div className="course-progress-container">
-          <p>
-            {currActivity.content}
-          </p>
-        </div>
+      <div className="activity-title-container">
+        <p>
+          {currActivity.title}
+        </p>
       </div>
-      <div className="activity-content-container">
-        <TextField className="activity-content" disabled>
+      <div className="course-progress-container">
+        <p>
           {currActivity.content}
-        </TextField>
+        </p>
       </div>
+      {/* <Box
+        className="activity-content-container"
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '100ch', margin: '17px' },
+        }}
+        noValidate
+        autoComplete="off"
+      > */}
+      <div className="activity-content-container">
+        {/* <TextField className="activity-content" defaultValue={currActivity.content} 
+            disabled multiline rows={15} sx={{ defaultValue: { color: 'black' } }}>
+          </TextField> */}
+        <p className="activity-content">
+          {currActivity.content}
+        </p>
+      </div>
+      {/* </Box> */}
+      {/* <Box
+        className="activity-comments-container"
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '55ch', margin: '6px' },
+        }}
+        noValidate
+        autoComplete="off"
+      > */}
       <div className="activity-comments-container">
-        <TextField className="activity-comments" disabled>
+        {/* <Box className="activity-comments" component="div" sx={{ visibility: 'visible', whiteSpace: 'normal' }}>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          </Box> */}
+        {/* <TextField className="activity-comments" defaultValue={currActivity.comments} 
+            disabled multiline rows={15} sx={{ input: { color: 'black' } }}>
+            {currActivity.comments}
+          </TextField> */}
+        <p className="activity-comments-content">
           {currActivity.comments}
-        </TextField>
+        </p>
       </div>
+      {/* </Box> */}
       <div className="buttons-panel">
         <Button className="next-button" variant="primary" onClick={handleNext}>
           Next
+        </Button>
+        <Button className="stop-button" variant="primary" onClick={handleShowComments}>
+          Show comments
         </Button>
         <Button className="stop-button" variant="primary" onClick={handleStop}>
           Stop
