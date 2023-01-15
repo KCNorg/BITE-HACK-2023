@@ -36,6 +36,7 @@ export default function YourProfile() {
   return (
     <Card sx={{ maxWidth: 345 }} style={{backgroundColor:'#b1d9fc'}}>
       <CardHeader
+        style={{backgroundColor:'#fff757'}}
         avatar={
             <Avatar variant="rounded" src={require('./avatar1.jpg')} sx={{ width: 50, height: 50 }}/>
         }
@@ -46,8 +47,8 @@ export default function YourProfile() {
         }
         title="Przemysław Roman"
       />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
+      <CardContent >
+        <Typography variant='button'>
             <span role="img" aria-label="fire">🔥 31 days streak</span>
             <br/>
             <span role="img" aria-label="star">⭐</span>
