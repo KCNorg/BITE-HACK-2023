@@ -39,11 +39,11 @@ export default function FriendsList() {
     >
     <ListItem disablePadding>
         <Box sx={{ p: 2, display: 'flex' }}>
-            <Avatar variant="rounded" src={require('./avatar1.jpg')} sx={{ width: 50, height: 50 }}/>
+            <Avatar variant="rounded" src={require('./avatars/avatar1.jpg')} sx={{ width: 50, height: 50 }}/>
             <Stack spacing={0.5}>
-            <Typography fontWeight={700} paddingLeft={1}>Roman</Typography>
+            <Typography fontWeight={700} paddingLeft={1}>Emilie Vincent</Typography>
             <Typography variant="body2" color="text.secondary">
-            <LocationOn /> Krk, PL
+            <LocationOn /> Chicago, USA
             </Typography>
             </Stack>
             <IconButton>
@@ -53,11 +53,11 @@ export default function FriendsList() {
     </ListItem>
     <ListItem disablePadding>
         <Box sx={{ p: 2, display: 'flex' }}>
-            <Avatar variant="rounded" src={require('./avatar2.jpg')} sx={{ width: 50, height: 50 }}/>
+            <Avatar variant="rounded" src={require('./avatars/avatar2.jpg')} sx={{ width: 50, height: 50 }}/>
             <Stack spacing={0.5}>
-            <Typography fontWeight={700} paddingLeft={1}>Gorgo Paweł</Typography>
+            <Typography fontWeight={700} paddingLeft={1}>Rahul Bishop</Typography>
             <Typography variant="body2" color="text.secondary">
-            <LocationOn /> Zbiersk, PL
+            <LocationOn /> Warsaw, PL
             </Typography>
             </Stack>
             <IconButton>
@@ -67,9 +67,9 @@ export default function FriendsList() {
         </ListItem>
     <ListItem disablePadding>
         <Box sx={{ p: 2, display: 'flex' }}>
-            <Avatar variant="rounded" src={require('./avatar3.jpg')} sx={{ width: 50, height: 50 }}/>
+            <Avatar variant="rounded" src={require('./avatars/avatar3.jpg')} sx={{ width: 50, height: 50 }}/>
             <Stack spacing={0.5}>
-            <Typography fontWeight={700} paddingLeft={1}>Dariusz P.</Typography>
+            <Typography fontWeight={700} paddingLeft={1}>Susie Fields</Typography>
             <Typography variant="body2" color="text.secondary">
             <LocationOn /> Barcelona, ESP
             </Typography>
