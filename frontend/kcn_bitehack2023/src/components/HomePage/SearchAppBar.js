@@ -23,7 +23,7 @@ import SavedCourses from './SavedCourses';
 import FriendsList from './FriendsList';
 import YourProfile from './YourProfile';
 import Results from './Results';
-import { useEffect } from "react";
+import CurrentCourse from './CurrentCourse'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -218,7 +218,6 @@ export default function SearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            Roman OOOOOOOOOOOO
           </Typography>
           <Search>
             <IconButton size="small" color="inherit">
@@ -290,6 +289,9 @@ export default function SearchAppBar() {
       <div className="Friends-profile">
         <YourProfile/>
         <FriendsList/>
+      </div>
+      <div>
+        <CurrentCourse/>
       </div>
     </Box>
   );

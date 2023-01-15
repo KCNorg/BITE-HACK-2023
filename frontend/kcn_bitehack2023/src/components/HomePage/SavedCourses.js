@@ -37,11 +37,6 @@ export default function SavedCourses() {
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText primary="Algorithms and Data Structures - Part 1" />
-        </ListItemButton>
-      </ListItem>
-      <ListItem disablePadding>
-        <ListItemButton>
           <ListItemText primary="Algorithms and Data Structures - Part 2" />
         </ListItemButton>
       </ListItem>
