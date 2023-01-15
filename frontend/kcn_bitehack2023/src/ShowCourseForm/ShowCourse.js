@@ -110,7 +110,7 @@ function ShowCourse() {
         <div className="activity-comments-container">
           {currActivity.comments.map((comment, i) => {
             return (
-              <Card class="activity-comment-container" sx={{ maxWidth: 345 }}>
+              <Card class="activity-comment-container" sx={{ maxWidth: 345 }} style={{backgroundColor:'#b1d9fc'}}>
                 <CardHeader
                   avatar={
                     <Avatar variant="rounded" src={require(`${users[commentUsers[currActivity.id][i]].avatarPath}`)} sx={{ width: 50, height: 50 }} />
@@ -135,11 +135,11 @@ function ShowCourse() {
   return (
     <div className="show-course-form">
       <div className="activity-title-container">
-        <p className="activity-title">
+        <p className="activity-title" >
           {currActivity.title}
         </p>
       </div>
-      <div className="course-progress-container">
+      <div className="course-progress-container" >
         <Typography variant="body1" color="text.primary">
           Progress
         </Typography>
@@ -153,9 +153,9 @@ function ShowCourse() {
           />
       </div>
       <div className="activity-content-container">
-        <p className="activity-content">
+        <Card className="activity-content" style={{backgroundColor:'#e2f59f'}}>
           {currActivity.content}
-        </p>
+        </Card>
       </div>
       {getCommentsReprs()}
       <div className="buttons-panel">
