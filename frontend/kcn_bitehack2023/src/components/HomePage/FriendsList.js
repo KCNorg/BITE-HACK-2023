@@ -37,7 +37,6 @@ export default function FriendsList() {
       }
     >
     <ListItem disablePadding>
-    <Card>
         <Box sx={{ p: 2, display: 'flex' }}>
             <Avatar variant="rounded" src={require('./avatar1.jpg')} sx={{ width: 50, height: 50 }}/>
             <Stack spacing={0.5}>
@@ -50,10 +49,8 @@ export default function FriendsList() {
             {/* <Edit sx={{ fontSize: 14 }} /> */}
             </IconButton>
         </Box>
-    </Card>
     </ListItem>
     <ListItem disablePadding>
-    <Card>
         <Box sx={{ p: 2, display: 'flex' }}>
             <Avatar variant="rounded" src={require('./avatar2.jpg')} sx={{ width: 50, height: 50 }}/>
             <Stack spacing={0.5}>
@@ -66,8 +63,22 @@ export default function FriendsList() {
             {/* <Edit sx={{ fontSize: 14 }} /> */}
             </IconButton>
         </Box>
-        </Card>
+        </ListItem>
+    <ListItem disablePadding>
+        <Box sx={{ p: 2, display: 'flex' }}>
+            <Avatar variant="rounded" src={require('./avatar3.jpg')} sx={{ width: 50, height: 50 }}/>
+            <Stack spacing={0.5}>
+            <Typography fontWeight={700} paddingLeft={1}>Dariusz P.</Typography>
+            <Typography variant="body2" color="text.secondary">
+            <LocationOn /> Barcelona, ESP
+            </Typography>
+            </Stack>
+            <IconButton>
+            {/* <Edit sx={{ fontSize: 14 }} /> */}
+            </IconButton>
+        </Box>
       </ListItem>
+
     </List>
     </div>
   );

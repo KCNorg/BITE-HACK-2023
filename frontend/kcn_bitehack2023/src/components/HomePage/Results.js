@@ -4,61 +4,59 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import StarIcon from '@mui/icons-material/Star';
+import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 import ListSubheader from '@mui/material/ListSubheader';
 
-export default function RecommendedCourses() {
+export default function Results() {
   return (
     <div className='Recommended-courses'>
     <List
-    
-      style={{backgroundColor:'#b1d9fc'}}
-      sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper'}}
+      sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper' }}
       aria-label="contacts"
       subheader={
-        <ListSubheader style={{backgroundColor:'#e2ffad'}} component="div" id="nested-list-subheader">
-          Recommended courses
+        <ListSubheader component="div" id="nested-list-subheader">
+          Search results
         </ListSubheader>
       }
     >
       <ListItem disablePadding>
         <ListItemButton>
           <ListItemIcon>
-            <StarIcon />
+            <DownloadOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="Getting started with Docker" />
+          <ListItemText primary="Python - your first steps with django" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
         <ListItemIcon>
-            <StarIcon />
+            <DownloadOutlinedIcon />
           </ListItemIcon>
-          <ListItemText  primary="Introduction to the Theory of Relativity" />
+          <ListItemText  primary="Coding for Beginners 1" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
         <ListItemIcon>
-            <StarIcon />
+            <DownloadOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="Linear Algebra: Basics " />
+          <ListItemText primary="Coding for Beginners 2" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
         <ListItemIcon>
-            <StarIcon />
+            <DownloadOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="How to start your journey with fishing" />
+          <ListItemText primary="UI/UX Design Specialization" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
         <ListItemIcon>
-            <StarIcon />
+            <DownloadOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="How to start with FPGA?" />
+          <ListItemText primary="Cloud computing course" />
         </ListItemButton>
       </ListItem>
     </List>
