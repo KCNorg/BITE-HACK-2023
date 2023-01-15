@@ -21,9 +21,11 @@ import "./styles.css"
 import RecommendedCourses from './RecommendedCourses';
 import SavedCourses from './SavedCourses';
 import FriendsList from './FriendsList';
-import CreateCoursePopout from "../CreateCoursePopout/CreateCoursePopout";
+import YourProfile from './YourProfile';
+import Results from './Results';
+import CurrentCourse from './CurrentCourse'
+import News from './News'
 
-// var data = require("./MOCK_DATA.json");
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -104,6 +106,26 @@ export default function SearchAppBar() {
   const onChange = (event) => {
     setValue(event.target.value);
   };
+
+  const [courses, setCourses] = useState(<RecommendedCourses/>)
+  // useEffect(() => {
+  //   setCourses(() => <Results/>);
+  // }, []); // <- add the count variable here
+
+
+  // var recommended = RecommendedCourses()
+  // const [courses, setCourses] = useState(<RecommendedCourses/>);
+  // va
+  // useEffect(() => {
+  //   function search(status) {
+  //     // setIsOnline(status.isOnline);
+  //   }
+  // })
+  // var courses = <RecommendedCourses/>
+  // const search = (event) => {
+  //   // setValue(event.target.value);
+  //   courses = <Results/>
+  // };
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -198,12 +220,11 @@ export default function SearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            Roman OOOOOOOOOOOO
           </Typography>
           <Search>
             <IconButton size="small" color="inherit">
             <Badge>
-              <SearchIcon />
+              <SearchIcon onClick={() => setCourses(() => <Results/>)} />
             </Badge>
               
             </IconButton>
@@ -262,13 +283,18 @@ export default function SearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
       <div>
-        <RecommendedCourses/>
+        {courses}
       </div>
       <div>
         <SavedCourses/>
       </div>
-      <div>
+      <div className="Friends-profile">
+        <YourProfile/>
         <FriendsList/>
+      </div>
+      <div>
+        <CurrentCourse/>
+        <News/>
       </div>
     </Box>
   );
