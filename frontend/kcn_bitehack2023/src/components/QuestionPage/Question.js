@@ -6,6 +6,7 @@ import {Button} from "@mui/material";
 import "./styles.css"
 import Alert from 'react-bootstrap/Alert';
 import {useState} from "react";
+import { useNavigate } from "react-router";
 
 export default function QuestionForm() {
     const [showAlert, setShowAlert] = useState(false);
@@ -22,8 +23,9 @@ export default function QuestionForm() {
         )
     }
 
-    const handleClick = () => {
-        alert('Good job!');
+    const navigate = useNavigate()
+    const handleStopClick = () => {
+        navigate("/homePage")
     };
 
     return (
@@ -59,6 +61,7 @@ export default function QuestionForm() {
                         <Button
                             variant="contained"
                             color="error"
+                            onClick={handleStopClick}
                             sx={{ marginTop: '17px', width: "200px" }}>
                             Stop Learning
                         </Button>
