@@ -30,7 +30,11 @@ function ShowCourse() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const activities = [
-    new Activity(0, "T1", "C1", ["Good one1", "Interesting1sssssssss", "Inspiring1"]),
+    new Activity(0, "T1", `There are four types of Java access modifiers:
+    Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+    Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+    Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+    Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.`, ["Good one1", "Interesting1sssssssss", "Inspiring1"]),
     new Activity(1, "T2", "C2", ["Good one2", "Interesting2"]),
     new Activity(2, "T3", "C3", ["Good one3", "Interesting3"]),
     new Activity(3, "T4", "C4", ["Inspiring4"]),
@@ -38,32 +42,30 @@ function ShowCourse() {
   console.log(params.get("activityId"))
   const commentTypes = [[0, 1, 2], [2, 1], [1, 0], [0]];
   const commentUsers = [[0, 2, 3], [1, 0], [2, 1], [2]];
-  const progressBarValues = [0, 50, 33, 50];
+  const progressBarValues = [0, 25, 50, 75];
   const users = [
     new User("FanatykWedkarstwa", "./avatar1.jpg"),
     new User("OOOORnitolog", "./avatar2.jpg"),
     new User("Krzysiu", "./avatar3.JPG"),
     new User("Patryk", "./avatar4.jpg"),
   ]
-  const currActivity = params.get("activityId") == null ?
-    activities[0] :
-    new Activity(
-      params.get("activityId"),
-      params.get("activityTitle"),
-      params.get("activityContent"),
-      params.get("activityComments").split(",")
-    );
+  // const activities[currActivityId] = params.get("activityId") == null ?
+  //   activities[0] :
+  //   new Activity(
+  //     params.get("activityId"),
+  //     params.get("activityTitle"),
+  //     params.get("activityContent"),
+  //     params.get("activityComments").split(",")
+  //   );
+  const currActivityId = params.get("activityId") == null ? 0 : parseInt(params.get("activityId"));
   // const showComments = false;
   const showComments = true;
 
   const handleNext = (event) => {
     event.preventDefault();
-    const nextActivity = activities[(currActivity.id + 1) % activities.length];
+    const nextActivity = activities[(currActivityId + 1) % activities.length];
     window.location.href = "/showCourse?" +
-      "activityId=" + nextActivity.id + "&" +
-      "activityTitle=" + nextActivity.title + "&" +
-      "activityContent=" + nextActivity.content + "&" +
-      "activityComments=" + nextActivity.comments
+      "activityId=" + nextActivity.id
       ;
   };
 
@@ -86,14 +88,14 @@ function ShowCourse() {
     if (showComments) {
       return (
         <div className="activity-comments-container">
-          {currActivity.comments.map((comment, i) => {
+          {activities[currActivityId].comments.map((comment, i) => {
             return (
               <Card class="activity-comment-container" sx={{ maxWidth: 345 }} style={{backgroundColor:'#b1d9fc'}}>
                 <CardHeader
                   avatar={
-                    <Avatar variant="rounded" src={require(`${users[commentUsers[currActivity.id][i]].avatarPath}`)} sx={{ width: 50, height: 50 }} />
+                    <Avatar variant="rounded" src={require(`${users[commentUsers[currActivityId][i]].avatarPath}`)} sx={{ width: 50, height: 50 }} />
                   }
-                  title={users[commentUsers[currActivity.id][i]].userName + getEmoji(commentTypes[currActivity.id][i])}
+                  title={users[commentUsers[currActivityId][i]].userName + getEmoji(commentTypes[currActivityId][i])}
                 />
                 <CardContent sx={{ padding: "0px 0px 0px 13px" }}>
                   <Typography variant="body2" color="text.primary">
@@ -114,7 +116,7 @@ function ShowCourse() {
     <div className="show-course-form">
       <div className="activity-title-container">
         <p className="activity-title" >
-          {currActivity.title}
+          {activities[currActivityId].title}
         </p>
       </div>
       <div className="course-progress-container" >
@@ -123,12 +125,12 @@ function ShowCourse() {
         </Typography>
         <div className='Progress-bar'>
           <ProgressBar className="course-progress" striped variant="success" 
-            animated now={progressBarValues[currActivity.id]} label={progressBarValues[currActivity.id] + "%"}/>
+            animated now={progressBarValues[currActivityId]} label={progressBarValues[currActivityId] + "%"}/>
         </div>
       </div>
       <div className="activity-content-container">
         <Card className="activity-content" style={{backgroundColor:'#e2f59f'}}>
-          {currActivity.content}
+          {activities[currActivityId].content}
         </Card>
       </div>
       {getCommentsReprs()}
