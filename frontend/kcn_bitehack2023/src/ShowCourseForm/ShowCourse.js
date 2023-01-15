@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import ProgressBar from "@ramonak/react-progress-bar";
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
@@ -35,11 +35,12 @@ function ShowCourse() {
     new Activity(2, "T3", "C3", ["Good one3", "Interesting3"]),
     new Activity(3, "T4", "C4", ["Inspiring4"]),
   ]
+  console.log(params.get("activityId"))
   const commentTypes = [[0, 1, 2], [2, 1], [1, 0], [0]];
   const commentUsers = [[0, 2, 3], [1, 0], [2, 1], [2]];
   const progressBarValues = [0, 50, 33, 50];
   const users = [
-    new User("FanatykWEdkarstwa", "./avatar1.jpg"),
+    new User("FanatykWedkarstwa", "./avatar1.jpg"),
     new User("OOOORnitolog", "./avatar2.jpg"),
     new User("Krzysiu", "./avatar3.JPG"),
     new User("Patryk", "./avatar4.jpg"),
@@ -66,30 +67,10 @@ function ShowCourse() {
       ;
   };
 
-  const handleShowComments = (event) => {
-    event.preventDefault();
-    showComments = !showComments;
-  };
-
   const handleStop = (event) => {
     event.preventDefault();
     window.location.href = "/homePage";
   };
-
-  const getRandomColor = () => {
-    return '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
-  }
-
-  const getColor = (commentType) => {
-    if (commentType === 0) {
-      return "#00FF00";
-    } else if (commentType === 1) {
-      return "#FF0000";
-    } else {
-      return "#0000FF";
-    }
-  }
-
   const getEmoji = (commentType) => {
     if (commentType === 0) {
       return "✔️";
@@ -100,9 +81,6 @@ function ShowCourse() {
     }
   }
 
-  const getRandomUser = () => {
-    return users[Math.floor(Math.random() * users.length)];
-  }
 
   const getCommentsReprs = () => {
     if (showComments) {
@@ -143,14 +121,10 @@ function ShowCourse() {
         <Typography variant="body1" color="text.primary">
           Progress
         </Typography>
-        <ProgressBar 
-          className="course-progress"
-          completed={progressBarValues[currActivity.id]} 
-          // className="wrapper"
-          // barContainerClassName="container"
-          // completedClassName="barCompleted"
-          // labelClassName="labelBar"
-          />
+        <div className='Progress-bar'>
+          <ProgressBar className="course-progress" striped variant="success" 
+            animated now={progressBarValues[currActivity.id]} label={progressBarValues[currActivity.id] + "%"}/>
+        </div>
       </div>
       <div className="activity-content-container">
         <Card className="activity-content" style={{backgroundColor:'#e2f59f'}}>

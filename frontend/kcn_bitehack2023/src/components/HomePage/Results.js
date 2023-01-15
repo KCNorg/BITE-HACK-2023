@@ -6,7 +6,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 import ListSubheader from '@mui/material/ListSubheader';
-
+import CourseDetailsPopout from "../CourseDetailsPopout/CourseDetailsPopout";
 export default function Results() {
   return (
     <div className='Recommended-courses'>
@@ -21,12 +21,7 @@ export default function Results() {
       }
     >
       <ListItem disablePadding>
-        <ListItemButton>
-          <ListItemIcon>
-            <DownloadOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Python - your first steps with django" />
-        </ListItemButton>
+        <CourseDetailsPopout/>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>

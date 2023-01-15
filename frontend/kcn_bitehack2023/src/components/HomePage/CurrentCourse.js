@@ -20,6 +20,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItem from '@mui/material/ListItem';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import {useNavigate} from "react-router-dom";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -34,7 +35,11 @@ const ExpandMore = styled((props) => {
 
 export default function CurrentCourse() {
   const [expanded, setExpanded] = React.useState(false);
+  const navigate = useNavigate();
 
+  function handleContinue(){
+    navigate("/showCourse");
+  }
 
   return (
     <div className='Current-course'>
@@ -57,7 +62,7 @@ export default function CurrentCourse() {
       {/* </CardContent> */}
       <CardActions disableSpacing>
         <div className='Continue-button'>
-        <Button variant="contained">Continue</Button>
+        <Button variant="contained" onClick={handleContinue}>Continue</Button>
         </div>
       </CardActions>
     </Card>
