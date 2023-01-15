@@ -1,0 +1,10 @@
+POST localhost:8080/manageCourse
+Content-Type: application/json
+
+{
+  "courseName": "Wędkarstwo dla opornych",
+  "tagsArr": ["wędkarstwo", "hobby", "piwo"],
+  "difficulty": "Beginner",
+  "description": "W ławty i przyjemny sposób zdobędziesz wiedzę niezbędną do złapanie swojeko pierwszego gigantycznego",
+  "taskItems": []
+}

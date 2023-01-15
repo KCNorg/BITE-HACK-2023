@@ -1,0 +1,26 @@
+POST localhost:8080/manageTask
+Content-Type: application/json
+
+
+{
+  "_id": "63c35a5d864e848e77f65e5e",
+  "item": {
+    "taskName": "Karp",
+     "note": "Karp król wod",
+     "taskQuestion": "Kto jest królem wod",
+     "answerList": [
+       {
+          "question": "Karp",
+          "isCorrect": true
+        },
+        {
+          "question": "Leszcz",
+          "isCorrect": false
+        },
+        {
+          "question": "Raszpla",
+          "isCorrect": false
+        }
+     ]
+  }
+}
