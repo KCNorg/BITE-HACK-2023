@@ -11,7 +11,7 @@ export default function RecommendedCourses() {
   return (
     <div className='Recommended-courses'>
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper' }}
       aria-label="contacts"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
@@ -24,27 +24,39 @@ export default function RecommendedCourses() {
           <ListItemIcon>
             <StarIcon />
           </ListItemIcon>
-          <ListItemText primary="Roman" />
+          <ListItemText primary="Getting started with Docker" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+        <ListItemIcon>
+            <StarIcon />
+          </ListItemIcon>
+          <ListItemText  primary="Introduction to the Theory of Relativity" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+        <ListItemIcon>
+            <StarIcon />
+          </ListItemIcon>
+          <ListItemText primary="Linear Algebra: Basics " />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+        <ListItemIcon>
+            <StarIcon />
+          </ListItemIcon>
+          <ListItemText primary="How to start your journey with fishing" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+        <ListItemIcon>
+            <StarIcon />
+          </ListItemIcon>
+          <ListItemText primary="How to start with FPGA?" />
         </ListItemButton>
       </ListItem>
     </List>

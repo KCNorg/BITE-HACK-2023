@@ -6,12 +6,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import StarIcon from '@mui/icons-material/Star';
 import ListSubheader from '@mui/material/ListSubheader';
+import { textAlign } from '@mui/system';
 
 export default function SavedCourses() {
   return (
     <div className='Saved-courses'>
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper'}}
       aria-label="contacts"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
@@ -21,27 +22,27 @@ export default function SavedCourses() {
     >
     <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+          <ListItemText primary="Intoduction to programming: Java" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+          <ListItemText primary="Kubernetes: Introduction" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+          <ListItemText primary="Intoduction to programming: Python" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+          <ListItemText primary="Algorithms and Data Structures - Part 1" />
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
-          <ListItemText inset primary="Roman" />
+          <ListItemText primary="Algorithms and Data Structures - Part 2" />
         </ListItemButton>
       </ListItem>
     </List>
