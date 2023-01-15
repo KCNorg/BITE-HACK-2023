@@ -32,8 +32,8 @@ export default function CourseDetailsPopout(courseInfo) {
     function TagsDifficulty(){
         return (
             <div className="tags-input-container">
-                <div className="tag-item">{}
-                    <span className="text">Beginner</span>
+                <div className="tag-item">
+                    <span className="text">Intermediate</span>
                 </div>
             </div>
         )
@@ -42,7 +42,7 @@ export default function CourseDetailsPopout(courseInfo) {
     function TagsDescription(){
         return (
             <div>
-                <div className="form-control">{}
+                <div className="form-control">
                     <span className="text">How many times have you decided to learn a programming language but got stuck somewhere along the way, grew frustrated, and gave up? This specialization is designed for learners who have little or no programming experience but want to use Python as a tool to play with data.</span>
                 </div>
             </div>
