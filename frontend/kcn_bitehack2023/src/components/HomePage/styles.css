@@ -24,10 +24,20 @@
 }
 
 .Friends-list{
-    position: absolute;
-    width: 220px;
+    /* position: absolute;
+    width: 230px;
     top: 35%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+    left: 88%;
+    transform: translate(-50%, -50%); */
     box-shadow: rgb(0 0 0 / 16%) 1px 3px 10px;
+    padding-top: 30px;
+}
+
+.Friends-profile{
+    padding-top: 30px;
+    position: absolute;
+    width: 230px;
+    top: 50%;
+    left: 87%;
+    transform: translate(-50%, -50%);
 }

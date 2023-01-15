@@ -21,9 +21,8 @@ import "./styles.css"
 import RecommendedCourses from './RecommendedCourses';
 import SavedCourses from './SavedCourses';
 import FriendsList from './FriendsList';
+import YourProfile from './YourProfile';
 
-
-var data = require("./MOCK_DATA.json");
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -267,7 +266,8 @@ export default function SearchAppBar() {
       <div>
         <SavedCourses/>
       </div>
-      <div>
+      <div className="Friends-profile">
+        <YourProfile/>
         <FriendsList/>
       </div>
     </Box>
