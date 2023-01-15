@@ -2,7 +2,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Auth from "./components/LoginForm/Auth"
-import ShowCourse from './ShowCourseForm/ShowCourse';
+import ShowCourse from './components/ShowCourseForm/ShowCourse';
 import CreateCourseTask from "./components/CreateCourseTask/CreateCourseTask"
 import HomePage from "./components/HomePage/HomePage"
 import QuestionForm from "./components/QuestionPage/Question";
