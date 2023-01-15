@@ -38,14 +38,14 @@ export default function YourProfile() {
       <CardHeader
         style={{backgroundColor:'#fff757'}}
         avatar={
-            <Avatar variant="rounded" src={require('./avatar1.jpg')} sx={{ width: 50, height: 50 }}/>
+            <Avatar variant="rounded" src={require('./avatars/avatar4.jpg')} sx={{ width: 50, height: 50 }}/>
         }
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-        title="Przemysław Roman"
+        title="Karina Roth"
       />
       <CardContent >
         <Typography variant='button'>

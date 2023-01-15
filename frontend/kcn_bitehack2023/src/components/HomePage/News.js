@@ -24,18 +24,18 @@ export default function News() {
             <Card sx={{ maxWidth: 450 }}>
                 <CardHeader
                     avatar={
-                        <Avatar variant="rounded" src={require('./avatar1.jpg')} sx={{ width: 40, height: 40 }}/>
+                        <Avatar variant="rounded" src={require('./avatars/avatar5.jpg')} sx={{ width: 40, height: 40 }}/>
                     }
                     action={
                     <IconButton aria-label="settings">
                         <MoreVertIcon />
                     </IconButton>
                     }
-                    title="Przemysław Roman"
+                    title="Ernest Orr"
                 />
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
-                        Roman added a course - Introduction to programming: Haskell
+                        Ernest added a course - Introduction to programming: Haskell
                     </Typography>
                 </CardContent>
                 </Card>
@@ -44,18 +44,18 @@ export default function News() {
                 <Card sx={{ maxWidth: 450 }}>
                 <CardHeader
                     avatar={
-                        <Avatar variant="rounded" src={require('./avatar1.jpg')} sx={{ width: 40, height: 40 }}/>
+                        <Avatar variant="rounded" src={require('./avatars/avatar6.jpg')} sx={{ width: 40, height: 40 }}/>
                     }
                     action={
                     <IconButton aria-label="settings">
                         <MoreVertIcon />
                     </IconButton>
                     }
-                    title="Przemysław Roman"
+                    title="Nicolas Phillips"
                 />
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
-                    Roman added a course - Spring Boot: part 2
+                    Nicolas added a course - Spring Boot: part 2
                     </Typography>
                 </CardContent>
                 </Card>
