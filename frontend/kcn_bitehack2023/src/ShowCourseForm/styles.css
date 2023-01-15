@@ -1,0 +1,116 @@
+.show-course-form {
+  height: 650px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 15px;
+  row-gap: 5px;
+  padding: 10px;
+  padding-top: 70px;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+}
+
+.activity-title-container {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  /* background-color: blue; */
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.activity-title {
+  margin: 0px;
+  padding-top: 15px;
+}
+
+.course-progress-container {
+  grid-column: 3;
+  grid-row: 1;
+  /* background-color: blueviolet; */
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.course-progress {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.activity-content-container {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  /* background-color: rgb(209, 231, 14); */
+  border: solid;
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+
+.activity-content {
+  color: black;
+  margin: 7px;
+  height: 400px;
+}
+
+.activity-comments-container {
+  grid-column: 3;
+  grid-row: 2;
+  /* background-color: rgb(255, 0, 123); */
+  /* border: solid; */
+  /* border-radius: 10px; */
+  margin: 7px;
+  height: 420px;
+}
+
+.activity-comments-content {
+  color: black;
+  border: solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.activity-comment-container {
+  color: black;
+  border: solid;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.activity-comment-content {
+  text-align: center;
+}
+
+.buttons-panel {
+  grid-column: 3;
+  grid-row: 3;
+  /* background-color: rgb(18, 212, 131); */
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+}
+
+/* .wrapper {
+  border: 3px solid blue;
+}
+
+.container {
+  background-color: pink;
+}
+
+.barCompleted {
+  background-color: lightblue;
+  width: 60%;
+}
+
+.labelBar {
+  font-size: 20px;
+  color: green;
+} */
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
