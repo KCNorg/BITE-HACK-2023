@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import ProgressBar from "@ramonak/react-progress-bar";
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
@@ -121,14 +121,10 @@ function ShowCourse() {
         <Typography variant="body1" color="text.primary">
           Progress
         </Typography>
-        <ProgressBar 
-          className="course-progress"
-          completed={progressBarValues[currActivity.id]} 
-          // className="wrapper"
-          // barContainerClassName="container"
-          // completedClassName="barCompleted"
-          // labelClassName="labelBar"
-          />
+        <div className='Progress-bar'>
+          <ProgressBar className="course-progress" striped variant="success" 
+            animated now={progressBarValues[currActivity.id]} label={progressBarValues[currActivity.id] + "%"}/>
+        </div>
       </div>
       <div className="activity-content-container">
         <p className="activity-content">
