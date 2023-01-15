@@ -30,24 +30,28 @@ function ShowCourse() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const activities = [
-    new Activity(0, "T1", `There are four types of Java access modifiers:<br>
+    new Activity(0, "Access modifiers", `There are four types of Java access modifiers:<br>
     Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.<br>
     Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
     Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
-    Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.`, ["Good one1", "Interesting1sssssssss", "Inspiring1"]),
-    new Activity(1, "T2", "C2", ["Good one2", "Interesting2"]),
-    new Activity(2, "T3", "C3", ["Good one3", "Interesting3"]),
-    new Activity(3, "T4", "C4", ["Inspiring4"]),
+    Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.`, ["Well explained", "Doesn't seem to be correct", "Can we use more than one access modifier at once?"]),
+    new Activity(1, "Data types", `Data types specify the different sizes and values that can be stored in the variable. There are two types of data types in Java:
+    Primitive data types: The primitive data types include boolean, char, byte, short, int, long, float and double.
+    Non-primitive data types: The non-primitive data types include Classes, Interfaces, and Arrays.`, ["What's the difference between int and Integer?", "The list of data types isn't exhaustive, therefore incorrect"]),
+    new Activity(2, "Ternary Operator", `The ternary operator ?: in Java is the only operator that accepts three operands:
+    booleanExpression ? expression1 : expression2
+    The very first operand must be a boolean expression, and the second and third operands can be any expression that returns some value. The ternary construct returns expression1 as an output if the first operand evaluates to true, expression2 otherwise.`, 
+    ["Bad practice, shouldn't be taught", "Interesting..."]),
   ]
   console.log(params.get("activityId"))
-  const commentTypes = [[0, 1, 2], [2, 1], [1, 0], [0]];
-  const commentUsers = [[0, 2, 3], [1, 0], [2, 1], [2]];
-  const progressBarValues = [0, 25, 50, 75];
+  const commentTypes = [[0, 1, 2], [2, 1], [1, 0]];
+  const commentUsers = [[0, 2, 3], [1, 0], [2, 1]];
+  const progressBarValues = [0, 33, 66];
   const users = [
-    new User("FanatykWedkarstwa", "./avatar1.jpg"),
-    new User("OOOORnitolog", "./avatar2.jpg"),
-    new User("Krzysiu", "./avatar3.JPG"),
-    new User("Patryk", "./avatar4.jpg"),
+    new User("Emilie Vincent", "./avatars/avatar1.jpg"),
+    new User("Rahul Bishop", "./avatars/avatar2.jpg"),
+    new User("Susie Fields", "./avatars/avatar3.jpg"),
+    new User("Ernest Orr", "./avatars/avatar5.jpg"),
   ]
   // const activities[currActivityId] = params.get("activityId") == null ?
   //   activities[0] :
