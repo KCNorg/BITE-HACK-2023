@@ -115,9 +115,9 @@ function ShowCourse() {
   return (
     <div className="show-course-form">
       <div className="activity-title-container">
-        <p className="activity-title" >
+      <Card className="title-card" style={{backgroundColor:'#9ff5af'}}>
           {activities[currActivityId].title}
-        </p>
+      </Card>
       </div>
       <div className="course-progress-container" >
         <Typography variant="body1" color="text.primary">
