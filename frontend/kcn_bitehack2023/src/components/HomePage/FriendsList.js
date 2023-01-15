@@ -28,10 +28,11 @@ export default function FriendsList() {
   return (
     <div className='Friends-list'>
     <List
+      style={{backgroundColor:'#b1d9fc'}}
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       aria-label="contacts"
       subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
+        <ListSubheader style={{backgroundColor:'#fff757'}} component="div" id="nested-list-subheader">
           Your friends
         </ListSubheader>
       }
