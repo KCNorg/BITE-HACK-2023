@@ -14,7 +14,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import Button from '@mui/material/Button';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { useState } from "react";
 import "./styles.css"
@@ -57,8 +56,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    // paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
@@ -89,9 +86,6 @@ export default function SearchAppBar() {
 
   const [value, setValue] = useState("");
 
-  // const onChange = (event) => {
-  //   setValue(event.target.value);
-  // };
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
@@ -99,7 +93,6 @@ export default function SearchAppBar() {
 
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
-    // our api to fetch the search result
     console.log("search ", searchTerm);
   };
 
@@ -108,24 +101,6 @@ export default function SearchAppBar() {
   };
 
   const [courses, setCourses] = useState(<RecommendedCourses/>)
-  // useEffect(() => {
-  //   setCourses(() => <Results/>);
-  // }, []); // <- add the count variable here
-
-
-  // var recommended = RecommendedCourses()
-  // const [courses, setCourses] = useState(<RecommendedCourses/>);
-  // va
-  // useEffect(() => {
-  //   function search(status) {
-  //     // setIsOnline(status.isOnline);
-  //   }
-  // })
-  // var courses = <RecommendedCourses/>
-  // const search = (event) => {
-  //   // setValue(event.target.value);
-  //   courses = <Results/>
-  // };
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (

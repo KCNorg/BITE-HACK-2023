@@ -14,7 +14,6 @@
 .activity-title-container {
   grid-column: 1 / span 2;
   grid-row: 1;
-  /* background-color: blue; */
   text-align: center;
   font-size: large;
   font-weight: bold;
@@ -28,7 +27,6 @@
 .course-progress-container {
   grid-column: 3;
   grid-row: 1;
-  /* background-color: blueviolet; */
   text-align: center;
   font-size: large;
   font-weight: bold;
@@ -42,16 +40,12 @@
 .activity-content-container {
   grid-column: 1 / span 2;
   grid-row: 2;
-  /* background-color: rgb(209, 231, 14); */
-  /* border: solid; */
   border-radius: 10px;
-  /* background-color: antiquewhite; */
   box-shadow: rgb(0 0 0 / 16%) 5px 10px 15px;
 }
 
 .activity-content {
   color: black;
-  /* margin: 7px; */
   padding: 10px;
   height: 400px;
 }
@@ -59,9 +53,6 @@
 .activity-comments-container {
   grid-column: 3;
   grid-row: 2;
-  /* background-color: rgb(255, 0, 123); */
-  /* border: solid; */
-  /* border-radius: 10px; */
   margin: 7px;
   height: 420px;
 }
@@ -74,8 +65,6 @@
 }
 
 .activity-comment-container {
-  /* color: black; */
-  /* border: solid; */
   box-shadow: rgb(0 0 0 / 16%) 1px 3px 5px;
   border-radius: 10px;
   margin-top: 5px;
@@ -89,29 +78,10 @@
 .buttons-panel {
   grid-column: 3;
   grid-row: 3;
-  /* background-color: rgb(18, 212, 131); */
   display: flex;
   column-gap: 50px;
   justify-content: center;
 }
-
-/* .wrapper {
-  border: 3px solid blue;
-}
-
-.container {
-  background-color: pink;
-}
-
-.barCompleted {
-  background-color: lightblue;
-  width: 60%;
-}
-
-.labelBar {
-  font-size: 20px;
-  color: green;
-} */
 
 .title-card{
   
