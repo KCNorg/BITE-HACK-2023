@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Auth />} />
-        <Route path="/dupa" element={<CreateCourseTask />} />
+        <Route path="/createCourse" element={<CreateCourseTask />} />
         <Route path="/homePage" element={<HomePage />} />
       </Routes>
     </BrowserRouter>

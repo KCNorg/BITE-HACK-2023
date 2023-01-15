@@ -3,13 +3,14 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import {Button} from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
+import {useLocation} from 'react-router-dom';
 import "./styles.css"
 
 export default function CreateCourseTask() {
 
-
+    const location = useLocation();
     //TODO title should be given from createCoursePage where it is seted
-    let title = "Fishing: the basics";
+    let title = location.state.name;
 
     const displayCourseName = () => {
         return (

@@ -3,13 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import {Button as MuiButton} from '@mui/material';
+import { useNavigate } from "react-router-dom";
 import "./styles.css"
 export default function CreateCoursePopout() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const navigate = useNavigate();
+    
     function handleCreate(e){
         e.preventDefault()
         fetch("http://localhost...", {
@@ -46,6 +48,7 @@ export default function CreateCoursePopout() {
         console.log(document.getElementById("difficultyControl").value);
         console.log(document.getElementById("descriptionControl").value);
         console.log(Array.from(document.getElementsByClassName("tag-item"), x => x.getElementsByClassName("text")[0].innerText));
+        navigate("/createCourse", {state:{id:1,name:document.getElementById("nameControl").value}});
     }
     function TagsInput(){
         const [tags, setTags] = useState([])
