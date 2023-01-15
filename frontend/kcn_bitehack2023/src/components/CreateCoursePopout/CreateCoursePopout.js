@@ -73,7 +73,7 @@ export default function CreateCoursePopout() {
 
     return (
         <>
-            <MuiButton variant="contained" color="secondary" onClick={handleShow}>Create notes</MuiButton>
+            <MuiButton variant="contained" color='warning' onClick={handleShow}>Create notes</MuiButton>
 
             <Modal show={show} onHide={handleClose} size="lg">
                 <Modal.Header closeButton>
