@@ -1,18 +1,27 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import ProgressBar from "@ramonak/react-progress-bar";
+import Avatar from '@mui/material/Avatar';
+import Typography from '@mui/material/Typography';
+import Stack from 'react-bootstrap/Stack';
 
 import "./styles.css";
 
 class Activity {
   constructor(id, title, content, comments) {
-    this.id = id;
+    this.id = parseInt(id);
     this.title = title; // unique
     this.content = content;
     this.comments = comments;
+  }
+}
+
+class User {
+  constructor(userName, avatarPath) {
+    this.userName = userName;
+    this.avatarPath = avatarPath;
   }
 }
 
@@ -21,9 +30,17 @@ function ShowCourse() {
   const params = new URLSearchParams(location.search);
   const activities = [
     new Activity(0, "T1", "C1", ["Good one1", "Interesting1sssssssss", "Inspiring1"]),
-    new Activity(1, "T2", "C2", ["Good one2", "Interesting2", "Inspiring2"]),
-    new Activity(2, "T3", "C3", ["Good one3", "Interesting3", "Inspiring3"]),
-    new Activity(3, "T4", "C4", ["Good one4", "Interesting4", "Inspiring4"]),
+    new Activity(1, "T2", "C2", ["Good one2", "Interesting2"]),
+    new Activity(2, "T3", "C3", ["Good one3", "Interesting3"]),
+    new Activity(3, "T4", "C4", ["Inspiring4"]),
+  ]
+  const commentTypes = [[0, 1, 2], [2, 1], [1, 0], [0]];
+  const commentUsers = [[0, 2, 3], [1, 0], [2, 1], [2]];
+  const users = [
+    new User("FanatykWEdkarstwa", "./avatar1.jpg"),
+    new User("OOOORnitolog", "./avatar2.jpg"),
+    new User("Krzysiu", "./avatar3.JPG"),
+    new User("Patryk", "./avatar4.jpg"),
   ]
   const currActivity = params.get("activityId") == null ?
     activities[0] :
@@ -59,16 +76,36 @@ function ShowCourse() {
     return '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
   }
 
+  const getColor = (commentType) => {
+    console.log(commentType);
+    if (commentType === 0) {
+      return "#00FF00";
+    } else if (commentType === 1) {
+      return "#FF0000";
+    } else {
+      return "#0000FF";
+    }
+  }
+
+  const getRandomUser = () => {
+    return users[Math.floor(Math.random() * users.length)];
+  }
+
   const getCommentsReprs = () => {
     console.log(currActivity.comments)
     return (
       <div className="activity-comments-container">
-        {currActivity.comments.map(comment => {
+        {currActivity.comments.map((comment, i) => {
           return (
-            <div class="activity-comment-container" style={{ backgroundColor: getRandomColor() }}>
-              <img src="img_girl.jpg" alt="Girl in a jacket"></img>
-              <p class="activity-comment-content">{comment}</p>
-            </div>
+            <Box sx={{ p: 2, display: 'flex' }} class="activity-comment-container" 
+              style={{ backgroundColor: getColor(commentTypes[currActivity.id][i]) }}>
+              <Avatar variant="rounded" src={require(`${users[commentUsers[currActivity.id][i]].avatarPath}`)}
+                sx={{ width: 50, height: 50 }} />
+              <Stack spacing={0.5}>
+                <Typography fontWeight={700} paddingLeft={1}>{users[commentUsers[currActivity.id][i]].userName}</Typography>
+                <p class="activity-comment-content">{comment}</p>
+              </Stack>
+            </Box>
           );
         })}
       </div>
