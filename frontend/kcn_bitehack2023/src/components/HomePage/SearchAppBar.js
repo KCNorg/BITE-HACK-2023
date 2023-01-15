@@ -26,6 +26,7 @@ import Results from './Results';
 import CurrentCourse from './CurrentCourse'
 import News from './News'
 
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -238,7 +239,7 @@ export default function SearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button variant="contained" color="secondary">Create notes</Button>
+            <CreateCoursePopout/>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
                 <MailIcon />

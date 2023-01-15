@@ -1,0 +1,78 @@
+.Task-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Task-form {
+    width: 1070px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.Task-form-content {
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Task-form-content-item {
+    margin: 17px;
+}
+
+
+
+.Task-form-content-grid {
+    display: grid;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-content: start;
+}
+
+
+.Task-grid-theory {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.Task-grid-quiz {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.Task-form-name-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+}
+
+
+.Task-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+}
+
+.Task-form-sub-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 18px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+}
