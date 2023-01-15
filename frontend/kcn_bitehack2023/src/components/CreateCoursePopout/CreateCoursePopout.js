@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css"
 export default function CreateCoursePopout() {
     const [show, setShow] = useState(false);
+    const [courseID, setCourseID] = useState("");
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -14,7 +15,7 @@ export default function CreateCoursePopout() {
     
     function handleCreate(e){
         e.preventDefault()
-        fetch("http://localhost...", {
+        fetch("http://localhost:8080/manageCourse", {
             method: "POST",
             headers: {"Content-Type": "application/json", 'Accept': 'application/json'},
             body: JSON.stringify({
@@ -23,32 +24,24 @@ export default function CreateCoursePopout() {
                     x => x.getElementsByClassName("text")[0].innerText),
                 difficulty: document.getElementById("difficultyControl").value,
                 description: document.getElementById("descriptionControl").value,
+                taskItems: [],
             })
-        })
-        //     .then((response) => response.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         let result = data["result"];
-        //         let resultPretty = "";
-        //         if (result === "win") {
-        //             resultPretty = "Team 1 will win";
-        //         } else if (result === "lose") {
-        //             resultPretty = "Team 2 will win";
-        //         } else {
-        //             resultPretty = "Teams will draw";
-        //         }
-        //         window.location.href = "/resultView?result=" + resultPretty;
-        //     });
+        }).then((response) => response.json())
+            .then(data => {
+                console.log(data);
+                setCourseID(data.courseID)
+            });
 
-        console.log(document.getElementById("nameControl").value);
-        let tagItems = document.getElementsByClassName("tag-item");
-        for (let i = 0, len = tagItems.length; i < len; i++) {
-            console.log(tagItems[i].getElementsByClassName("text")[0].innerText);
-        }
-        console.log(document.getElementById("difficultyControl").value);
-        console.log(document.getElementById("descriptionControl").value);
-        console.log(Array.from(document.getElementsByClassName("tag-item"), x => x.getElementsByClassName("text")[0].innerText));
-        navigate("/createCourse", {state:{id:1,name:document.getElementById("nameControl").value}});
+        // console.log(document.getElementById("nameControl").value);
+        // let tagItems = document.getElementsByClassName("tag-item");
+        // for (let i = 0, len = tagItems.length; i < len; i++) {
+        //     console.log(tagItems[i].getElementsByClassName("text")[0].innerText);
+        // }
+        // console.log(document.getElementById("difficultyControl").value);
+        // console.log(document.getElementById("descriptionControl").value);
+        // console.log(Array.from(document.getElementsByClassName("tag-item"), x => x.getElementsByClassName("text")[0].innerText));
+        let courseName = document.getElementById("nameControl").value;
+        navigate("/createCourse", {state:{id:1,name:courseName, courseID: courseID}});
     }
     function TagsInput(){
         const [tags, setTags] = useState([])

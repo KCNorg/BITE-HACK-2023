@@ -29,7 +29,7 @@ export default function CreateCourseTask() {
             method: "POST",
             headers: {"Content-Type": "application/json", 'Accept': 'application/json'},
             body: JSON.stringify({
-                _id: location.state._id,
+                _id: location.state.courseID,
                 item: {
                     taskName: document.getElementById("task-name").value,
                     note: document.getElementById("outlined-multiline-flexible my-text-fields").value,
