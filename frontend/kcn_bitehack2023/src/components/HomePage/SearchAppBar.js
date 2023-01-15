@@ -25,7 +25,7 @@ import YourProfile from './YourProfile';
 import Results from './Results';
 import CurrentCourse from './CurrentCourse'
 import News from './News'
-
+import CreateCoursePopout from "../CreateCoursePopout/CreateCoursePopout";
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
