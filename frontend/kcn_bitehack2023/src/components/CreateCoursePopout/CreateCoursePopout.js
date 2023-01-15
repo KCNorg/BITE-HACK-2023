@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import {Button as MuiButton} from '@mui/material';
 import "./styles.css"
 export default function CreateCoursePopout() {
     const [show, setShow] = useState(false);
@@ -76,9 +77,7 @@ export default function CreateCoursePopout() {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
-            </Button>
+            <MuiButton variant="contained" color="secondary" onClick={handleShow}>Create notes</MuiButton>
 
             <Modal show={show} onHide={handleClose} size="lg">
                 <Modal.Header closeButton>

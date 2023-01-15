@@ -21,9 +21,9 @@ import "./styles.css"
 import RecommendedCourses from './RecommendedCourses';
 import SavedCourses from './SavedCourses';
 import FriendsList from './FriendsList';
+import CreateCoursePopout from "../CreateCoursePopout/CreateCoursePopout";
 
-
-var data = require("./MOCK_DATA.json");
+// var data = require("./MOCK_DATA.json");
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -218,7 +218,7 @@ export default function SearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button variant="contained" color="secondary">Create notes</Button>
+            <CreateCoursePopout/>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
                 <MailIcon />
