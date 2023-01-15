@@ -45,6 +45,7 @@ export default function YourProfile() {
             <MoreVertIcon />
           </IconButton>
         }
+        titleTypographyProps={{variant:'h5' }}
         title="Karina Roth"
       />
       <CardContent >
