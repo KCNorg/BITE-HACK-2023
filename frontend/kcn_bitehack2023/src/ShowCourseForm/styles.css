@@ -20,6 +20,10 @@
   font-weight: bold;
 }
 
+.activity-title {
+  margin: 0px;
+  padding-top: 25px;
+}
 
 .course-progress-container {
   grid-column: 3;
@@ -28,6 +32,11 @@
   text-align: center;
   font-size: large;
   font-weight: bold;
+}
+
+.course-progress {
+  width: 90%;
+  margin-left: 5%;
 }
 
 .activity-content-container {
@@ -81,6 +90,24 @@
   column-gap: 50px;
   justify-content: center;
 }
+
+/* .wrapper {
+  border: 3px solid blue;
+}
+
+.container {
+  background-color: pink;
+}
+
+.barCompleted {
+  background-color: lightblue;
+  width: 60%;
+}
+
+.labelBar {
+  font-size: 20px;
+  color: green;
+} */
 
 label {
   font-size: 14px;

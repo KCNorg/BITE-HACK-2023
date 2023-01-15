@@ -1,11 +1,12 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import Box from '@mui/material/Box';
 import ProgressBar from "@ramonak/react-progress-bar";
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import Stack from 'react-bootstrap/Stack';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
 
 import "./styles.css";
 
@@ -36,6 +37,7 @@ function ShowCourse() {
   ]
   const commentTypes = [[0, 1, 2], [2, 1], [1, 0], [0]];
   const commentUsers = [[0, 2, 3], [1, 0], [2, 1], [2]];
+  const progressBarValues = [0, 50, 33, 50];
   const users = [
     new User("FanatykWEdkarstwa", "./avatar1.jpg"),
     new User("OOOORnitolog", "./avatar2.jpg"),
@@ -50,6 +52,8 @@ function ShowCourse() {
       params.get("activityContent"),
       params.get("activityComments").split(",")
     );
+  // const showComments = false;
+  const showComments = true;
 
   const handleNext = (event) => {
     event.preventDefault();
@@ -64,12 +68,12 @@ function ShowCourse() {
 
   const handleShowComments = (event) => {
     event.preventDefault();
-
+    showComments = !showComments;
   };
 
   const handleStop = (event) => {
     event.preventDefault();
-
+    window.location.href = "/homePage";
   };
 
   const getRandomColor = () => {
@@ -77,7 +81,6 @@ function ShowCourse() {
   }
 
   const getColor = (commentType) => {
-    console.log(commentType);
     if (commentType === 0) {
       return "#00FF00";
     } else if (commentType === 1) {
@@ -87,29 +90,46 @@ function ShowCourse() {
     }
   }
 
+  const getEmoji = (commentType) => {
+    if (commentType === 0) {
+      return "✔️";
+    } else if (commentType === 1) {
+      return "❌";
+    } else {
+      return "❔";
+    }
+  }
+
   const getRandomUser = () => {
     return users[Math.floor(Math.random() * users.length)];
   }
 
   const getCommentsReprs = () => {
-    console.log(currActivity.comments)
-    return (
-      <div className="activity-comments-container">
-        {currActivity.comments.map((comment, i) => {
-          return (
-            <Box sx={{ p: 2, display: 'flex' }} class="activity-comment-container" 
-              style={{ backgroundColor: getColor(commentTypes[currActivity.id][i]) }}>
-              <Avatar variant="rounded" src={require(`${users[commentUsers[currActivity.id][i]].avatarPath}`)}
-                sx={{ width: 50, height: 50 }} />
-              <Stack spacing={0.5}>
-                <Typography fontWeight={700} paddingLeft={1}>{users[commentUsers[currActivity.id][i]].userName}</Typography>
-                <p class="activity-comment-content">{comment}</p>
-              </Stack>
-            </Box>
-          );
-        })}
-      </div>
-    );
+    if (showComments) {
+      return (
+        <div className="activity-comments-container">
+          {currActivity.comments.map((comment, i) => {
+            return (
+              <Card class="activity-comment-container" sx={{ maxWidth: 345 }}>
+                <CardHeader
+                  avatar={
+                    <Avatar variant="rounded" src={require(`${users[commentUsers[currActivity.id][i]].avatarPath}`)} sx={{ width: 50, height: 50 }} />
+                  }
+                  title={users[commentUsers[currActivity.id][i]].userName + getEmoji(commentTypes[currActivity.id][i])}
+                />
+                <CardContent sx={{ padding: "0px 0px 0px 13px" }}>
+                  <Typography variant="body2" color="text.primary">
+                    {comment}
+                  </Typography>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      );
+    } else {
+      return <p>ASDSAD</p>
+    }
   }
 
   return (
@@ -120,7 +140,17 @@ function ShowCourse() {
         </p>
       </div>
       <div className="course-progress-container">
-        <ProgressBar completed={60} />
+        <Typography variant="body1" color="text.primary">
+          Progress
+        </Typography>
+        <ProgressBar 
+          className="course-progress"
+          completed={progressBarValues[currActivity.id]} 
+          // className="wrapper"
+          // barContainerClassName="container"
+          // completedClassName="barCompleted"
+          // labelClassName="labelBar"
+          />
       </div>
       <div className="activity-content-container">
         <p className="activity-content">
@@ -132,9 +162,9 @@ function ShowCourse() {
         <Button className="next-button" variant="primary" onClick={handleNext}>
           Next
         </Button>
-        <Button className="stop-button" variant="primary" onClick={handleShowComments}>
+        {/* <Button className="stop-button" variant="primary" onClick={handleShowComments}>
           Show comments
-        </Button>
+        </Button> */}
         <Button className="stop-button" variant="primary" onClick={handleStop}>
           Stop
         </Button>
