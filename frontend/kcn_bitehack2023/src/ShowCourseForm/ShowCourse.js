@@ -64,9 +64,14 @@ function ShowCourse() {
   const handleNext = (event) => {
     event.preventDefault();
     const nextActivity = activities[(currActivityId + 1) % activities.length];
-    window.location.href = "/showCourse?" +
-      "activityId=" + nextActivity.id
+    if (activities.length - 1 === currActivityId){
+      window.location.href = "/question"
+    }
+    else {
+      window.location.href = "/showCourse?" +
+          "activityId=" + nextActivity.id
       ;
+    }
   };
 
   const handleStop = (event) => {

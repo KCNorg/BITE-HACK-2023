@@ -8,7 +8,7 @@ import "./styles.css"
 
 export default function QuestionForm() {
 
-    let title = "Co jedzą karasie?"
+    let title = "From which scope a private variable can be accessed?"
 
     const displayCourseName = () => {
         return (
@@ -24,11 +24,9 @@ export default function QuestionForm() {
                 </div>
                 <div className="Question-form-questions">
                     <FormGroup>
-                        <FormControlLabel control={<Checkbox defaultChecked />} label="From which scope a private variable can be accessed" />
-                        <FormControlLabel disabled control={<Checkbox />} label="The same class" />
-                        <FormControlLabel disabled control={<Checkbox />} label="The same package" />
-                        <FormControlLabel disabled control={<Checkbox />} label="Outside the package through a child class" />
-                        <FormControlLabel disabled control={<Checkbox />} label="Anywhere" />
+                        <FormControlLabel control={<Checkbox />} label="The same class" />
+                        <FormControlLabel control={<Checkbox />} label="The same package" />
+                        <FormControlLabel control={<Checkbox />} label="Anywhere" />
                     </FormGroup>
                 </div>
                 <div className="Question-form-button">
