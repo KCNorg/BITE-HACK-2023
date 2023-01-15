@@ -32,14 +32,6 @@ export default function CreateCoursePopout() {
                 setCourseID(data.courseID)
             });
 
-        // console.log(document.getElementById("nameControl").value);
-        // let tagItems = document.getElementsByClassName("tag-item");
-        // for (let i = 0, len = tagItems.length; i < len; i++) {
-        //     console.log(tagItems[i].getElementsByClassName("text")[0].innerText);
-        // }
-        // console.log(document.getElementById("difficultyControl").value);
-        // console.log(document.getElementById("descriptionControl").value);
-        // console.log(Array.from(document.getElementsByClassName("tag-item"), x => x.getElementsByClassName("text")[0].innerText));
         let courseName = document.getElementById("nameControl").value;
         navigate("/createCourse", {state:{id:1,name:courseName, courseID: courseID}});
     }
