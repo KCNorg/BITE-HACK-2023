@@ -6,8 +6,6 @@ import {Button} from "@mui/material";
 import "./styles.css"
 
 
-
-
 export default function QuestionForm() {
 
     let title = "Co jedzą karasie?"
@@ -26,9 +24,11 @@ export default function QuestionForm() {
                 </div>
                 <div className="Question-form-questions">
                     <FormGroup>
-                        <FormControlLabel control={<Checkbox defaultChecked />} label="Gówno" />
-                        <FormControlLabel disabled control={<Checkbox />} label="Nic" />
-                        <FormControlLabel disabled control={<Checkbox />} label="Dzieci" />
+                        <FormControlLabel control={<Checkbox defaultChecked />} label="From which scope a private variable can be accessed" />
+                        <FormControlLabel disabled control={<Checkbox />} label="The same class" />
+                        <FormControlLabel disabled control={<Checkbox />} label="The same package" />
+                        <FormControlLabel disabled control={<Checkbox />} label="Outside the package through a child class" />
+                        <FormControlLabel disabled control={<Checkbox />} label="Anywhere" />
                     </FormGroup>
                 </div>
                 <div className="Question-form-button">
