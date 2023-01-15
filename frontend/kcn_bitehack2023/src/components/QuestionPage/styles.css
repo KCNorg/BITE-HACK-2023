@@ -1,0 +1,51 @@
+.Question-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Question-form {
+    width: 1070px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: #b1d9fc;
+}
+
+.Task-form-content-item {
+    margin: 17px;
+}
+
+
+.Task-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+}
+
+.Question-form-questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Question-form-button {
+    display: flex;
+    justify-content: center;
+}
+
+.alert-after-submit{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    top: 10%;
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+}

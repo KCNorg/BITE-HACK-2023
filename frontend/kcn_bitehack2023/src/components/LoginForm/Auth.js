@@ -1,8 +1,12 @@
 import React, { useState } from "react"
-
+import {useNavigate} from "react-router-dom";
+import Button from "@mui/material/Button";
 export default function (props) {
   let [authMode, setAuthMode] = useState("signin")
-
+  const navigate = useNavigate();
+  function handleSubmit(){
+    navigate("/homePage");
+  }
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin")
   }
@@ -36,7 +40,7 @@ export default function (props) {
               />
             </div>
             <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
                 Submit
               </button>
             </div>
@@ -85,9 +89,9 @@ export default function (props) {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">
+            <Button className="btn btn-primary" onClick={handleSubmit}>
               Submit
-            </button>
+            </Button>
           </div>
           <p className="text-center mt-2">
             Forgot <a href="#">password?</a>
