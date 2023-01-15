@@ -52,12 +52,6 @@ export default function CreateCourseTask() {
             })
         })
 
-
-        // console.log(document.getElementById("task-name").value);
-        // console.log(document.getElementById("outlined-multiline-flexible my-text-fields").value);
-        // console.log(document.getElementById("outlined-flexible my-task-quiz-question").value);
-        // console.log(document.getElementById("outlined-flexible my-question1").value);
-        // console.log(document.getElementById("my-checkbox1").checked);
         navigate(0, {state:location.state});
     }
 
