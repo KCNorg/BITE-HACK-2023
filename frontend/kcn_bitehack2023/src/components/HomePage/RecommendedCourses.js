@@ -11,10 +11,12 @@ export default function RecommendedCourses() {
   return (
     <div className='Recommended-courses'>
     <List
-      sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper' }}
+    
+      style={{backgroundColor:'#b1d9fc'}}
+      sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper'}}
       aria-label="contacts"
       subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
+        <ListSubheader style={{backgroundColor:'#e2ffad'}} component="div" id="nested-list-subheader">
           Recommended courses
         </ListSubheader>
       }

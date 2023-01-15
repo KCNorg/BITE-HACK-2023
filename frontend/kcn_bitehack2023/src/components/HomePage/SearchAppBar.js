@@ -24,6 +24,7 @@ import FriendsList from './FriendsList';
 import YourProfile from './YourProfile';
 import Results from './Results';
 import CurrentCourse from './CurrentCourse'
+import News from './News'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -292,6 +293,7 @@ export default function SearchAppBar() {
       </div>
       <div>
         <CurrentCourse/>
+        <News/>
       </div>
     </Box>
   );

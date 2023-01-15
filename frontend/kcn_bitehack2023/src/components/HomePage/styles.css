@@ -12,6 +12,7 @@
     left: 17%;
     transform: translate(-50%, -50%);
     box-shadow: rgb(0 0 0 / 16%) 1px 3px 10px;
+    /* background-color: blue; */
 }
 
 .Saved-courses{
@@ -65,4 +66,17 @@
     align-items: center;
     padding-left: 15px;
     /* height: 100vh; */
+}
+
+.News{
+    position: absolute;
+    top: 71%;
+    left: 52.2%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgb(0 0 0 / 16%) 1px 3px 10px;
+    width: 500px;
+}
+
+.News-second-card{
+    padding-top: 10px;
 }

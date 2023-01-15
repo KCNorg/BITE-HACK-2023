@@ -38,7 +38,7 @@ export default function CurrentCourse() {
 
   return (
     <div className='Current-course'>
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} style={{backgroundColor:'#b1d9fc'}}>
       <CardHeader
         title="Current course"
       />
